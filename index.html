@@ -1,72 +1,149 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Wellgivers HMO</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellgivers HMO</title>
+  <style>
+    /* General Reset + Smooth Scroll */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      scroll-behavior: smooth;
+      background: #f9f9f9;
+      color: #333;
+    }
 
-		<!-- Wrapper -->
-		<div id="wrapper" class="fade-in">
+    /* Hero Section */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(46,139,87,0.85), rgba(32,178,170,0.85)),
+                  url('https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') 
+                  center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1.2s ease-in-out forwards;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: slideDown 1.2s ease forwards 0.3s;
+    }
+    header p {
+      font-size: 1.3em;
+      margin-bottom: 25px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: slideDown 1.2s ease forwards 0.6s;
+    }
+    header a {
+      background: white;
+      color: #2e8b57;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.1em;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards 1s;
+    }
+    header a:hover {
+      background: #2e8b57;
+      color: white;
+      transform: translateY(-3px);
+    }
 
-			<!-- Intro -->
-			<div id="intro">
-				<h1>Wellgivers HMO</h1>
-				<p>Seamless sponsorship and beneficiary enrollment in one place.</p>
-				<ul class="actions">
-					<li><a href="#flow" class="button icon solid solo fa-arrow-down scrolly">Start</a></li>
-				</ul>
-			</div>
+    /* Section */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      background: white;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1s ease forwards;
+      animation-timeline: view();
+      animation-range: entry 20% cover 30%;
+    }
+    section h2 {
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      color: #2e8b57;
+    }
+    section img {
+      max-width: 85%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease;
+    }
+    section img:hover {
+      transform: scale(1.05);
+    }
+    section a {
+      display: inline-block;
+      margin-top: 25px;
+      background: linear-gradient(to right, #2e8b57, #20b2aa);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    section a:hover {
+      background: #1d7c5c;
+      transform: translateY(-3px);
+    }
 
-			<!-- Main -->
-			<div id="main">
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
 
-				<!-- Flowchart Section -->
-				<article class="post featured" id="flow">
-					<header class="major">
-						<h2>Sponsorship Flow</h2>
-						<p>From sponsor registration to beneficiary onboarding and payment confirmation.</p>
-					</header>
-					<a href="#" class="image main">
-						<img src="images/flowchart.png" alt="Wellgivers Sponsorship Flowchart" />
-					</a>
-					<ul class="actions special">
-						<li><a href="https://forms.office.com/your-form-link" class="button large">Start Process</a></li>
-					</ul>
-				</article>
+  <!-- Hero Section -->
+  <header>
+    <h1>Welcome to Wellgivers HMO</h1>
+    <p>Your sponsorship journey simplified</p>
+    <a href="#flowchart">See Process</a>
+  </header>
 
-			</div>
+  <!-- Flowchart Section -->
+  <section id="flowchart">
+    <h2>Sponsorship Process Flow</h2>
+    <img src="flowchart.png" alt="Wellgivers Sponsorship Flowchart">
 
-			<!-- Footer -->
-			<footer id="footer">
-				<section class="split contact">
-					<section>
-						<h3>Email</h3>
-						<p><a href="mailto:info@wellgivers.com">info@wellgivers.com</a></p>
-					</section>
-					<section>
-						<h3>Follow Us</h3>
-						<ul class="icons alt">
-							<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon brands alt fa-facebook"><span class="label">Facebook</span></a></li>
-						</ul>
-					</section>
-				</section>
-			</footer>
+    <br><br>
+    <a href="https://forms.office.com/pages/responsepage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u&route=shorturl" target="_blank">
+      Start Sponsorship Registration
+    </a>
+  </section>
 
-		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
