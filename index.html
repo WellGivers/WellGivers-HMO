@@ -1,85 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wellgivers HMO</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
-    header {
-      height: 100vh;
-      background: linear-gradient(to right, #2e8b57, #20b2aa);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2em;
-      margin: 10px 0 20px;
-    }
-    header a {
-      background: white;
-      color: #2e8b57;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1.1em;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    header a:hover {
-      background: #eee;
-    }
-    section {
-      padding: 50px;
-      text-align: center;
-    }
-    section img {
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Wellgivers HMO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-  <!-- Hero Section -->
-  <header>
-    <h1>Welcome to Wellgivers HMO</h1>
-    <p>Your sponsorship journey simplified</p>
-    <a href="#flowchart">See Process</a>
-  </header>
+		<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
 
-  <!-- Flowchart Section -->
-  <section id="flowchart">
-    <h2>Sponsorship Process Flow</h2>
-    <!-- Option 1: If using image -->
-    <img src="flowchart.png" alt="Wellgivers Sponsorship Flowchart">
+			<!-- Intro -->
+			<div id="intro">
+				<h1>Welcome to Wellgivers HMO</h1>
+				<p>Streamlined sponsorship and beneficiary management in one place.</p>
+				<ul class="actions">
+					<li><a href="#flowchart" class="button icon solid solo fa-arrow-down scrolly">See Flow</a></li>
+				</ul>
+			</div>
 
-    <!-- Option 2: If embedding PowerPoint from OneDrive -->
-    <!--
-    <iframe src="YOUR_ONEDRIVE_EMBED_LINK" width="100%" height="500" frameborder="0"></iframe>
-    -->
+			<!-- Main -->
+			<div id="main">
 
-    <br><br>
-    <!-- Button to Microsoft Form -->
-    <a href="https://forms.office.com/pages/responsepage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u&route=shorturl" target="_blank" 
-       style="background:#2e8b57;color:white;padding:12px 24px;text-decoration:none;
-              border-radius:8px;font-size:1.2em;">
-       Start Sponsorship Registration
-    </a>
-  </section>
+				<!-- Flowchart Section -->
+				<article class="post featured" id="flowchart">
+					<header class="major">
+						<h2>How Sponsorship Works</h2>
+					</header>
+					<!-- Replace flowchart.png with your actual file name -->
+					<a href="#" class="image main"><img src="images/flowchart.png" alt="Wellgivers HMO Flowchart" /></a>
+					<ul class="actions special">
+						<li><a href="https://forms.office.com/pages/responsepage.aspx?id=L3qRuuHieUSsFHpAEWgRbB7NzIfS14dJmK6tVZzWfpxUOFoxWjFBUE9PQkZZOElBRDhBSTdKSFo4TS4u&route=shorturl" class="button large">Start Process</a></li>
+					</ul>
+				</article>
 
-</body>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="split contact">
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:info@wellgivers.com">info@wellgivers.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
